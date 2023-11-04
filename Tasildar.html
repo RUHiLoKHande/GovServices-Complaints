@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    /* Additional CSS for styling */
+    .container {
+      max-width:500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      
+    }
+
+    h2 {
+      text-align: center;
+      color: #333;
+    }
+
+    .input-group {
+      margin-bottom: 15px;
+    }
+
+    input[type="text"],
+    input[type="file"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 5px;
+      position: relative;
+      right: 12px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      font-size: 16px;
+    }
+
+    select {
+      background-color: #f9f9f9;
+    }
+
+    button[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    #otherFeedback {
+      display: none;
+    }
+    .btn{
+      background-color: rgb(25, 121, 230);
+    margin-left: 15px;
+    border: 2px solid;
+    width:80px;
+    height:30px;
+
+}
+  </style>
+</head>
+<body>
+  <div class="home">
+    <a href="Complaint.html">
+        <button class="btn">BACK</button>
+    </a>
+  <div class="container">
+    <h2>Complaint Form</h2>
+    <form method="post" action="submit_feedback.php" enctype="multipart/form-data">
+      <div class="input-group">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="village" placeholder="Village" required>
+        <input type="text" name="district" placeholder="District" required>
+        <input type="text" name="state" placeholder="State" required>
+      </div>
+      <div class="input-group">
+        <select name="feedbackType" required>
+          <option value="personal">Personal</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="input-group" id="otherFeedback">
+        <input type="text" name="otherReason" placeholder="Please specify other reason">
+      </div>
+      <div class="input-group">
+        <textarea name="complaint" placeholder="Complaint" required></textarea>
+      </div>
+      <div class="input-group">
+        <input type="file" name="file" accept=".jpg, .jpeg, .png, .pdf" required>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    // Additional JavaScript to show/hide the "Other" input
+    const feedbackTypeSelect = document.querySelector('select[name="feedbackType"]');
+    const otherFeedbackInput = document.getElementById('otherFeedback');
+
+    feedbackTypeSelect.addEventListener('change', function () {
+      if (feedbackTypeSelect.value === 'other') {
+        otherFeedbackInput.style.display = 'block';
+      } else {
+        otherFeedbackInput.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>

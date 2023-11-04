@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Governance At Your Door ComplaintHere</title>
+</head>
+<style>
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #b3aaaa;
+}
+
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 50px;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 2px solid;
+  margin-top:-40px;
+ 
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+label, select, textarea {
+  display: block;
+  margin-bottom: 10px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+textarea {
+  height: 100px;
+  width: 400px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 24px 160px 2px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+.new{
+    font-size:18px;
+    width: 370px;
+}
+.new1{
+    font-size:20px;
+
+}
+#complaintType{
+    font-size: 16px;
+}
+.btn{
+    margin-left: 15px;
+    border: 2px solid;
+
+}
+    
+</style>
+<body>
+    <div class="home">
+        <a href="Complaint.html">
+            <button class="btn">BACK</button>
+        </a>
+    </div>
+    <div class="container">
+      <h1>Complaint Box</h1>
+      <form action="PoliceOffice_complaint.php" method="post">
+        <label for="name" class="new1">Name:</label>
+<input type="text" id="name" name="name" placeholder="Your name" class="new">
+<label for="village" class="new1">Village Name:</label>
+<input type="text" id="village" name="village" placeholder="Your village name" class="new">
+<label for="district" class="new1">District:</label>
+<input type="text" id="district" name="district" placeholder="Your district" class="new">
+<label for="state" class "new1">State:</label>
+<input type="text" id="state" name="state" placeholder="Your state" class="new">
+<label for="complaintType">Select complaint type:</label>
+<select id="complaintType" name="complaintType">
+    <option value="Personal Issue">Personal Issue</option>
+    <option value="For Other Person">For Other Person</option>
+    <option value="Other">Other</option>
+</select>
+<label for="complaintText" class="new1">Complaint:</label>
+<input type="text" id="complaintText" name="complaintText" placeholder="complaintText" class="new">
+<label for="fileUpload" class="new1">Upload File:</label>
+<input type="file" id="fileUpload" name="fileUpload" class="new">
+<button type="submit" id="submitBtn">Submit</button>
+
+      </form>
+    </div>
+   
+
+  <!-- javascript -->
+  <script src="script.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+    const complaintType = document.getElementById("complaintType");
+    const complaintText = document.getElementById("complaintText");
+    const submitBtn = document.getElementById("submitBtn");
+  
+    submitBtn.addEventListener("click", function () {
+      const selectedType = complaintType.value;
+      const complaint = complaintText.value;
+  
+      if (complaint) {
+        alert(`Complaint Type: ${selectedType}\nComplaint: ${complaint}`);
+        complaintText.value = "";
+      } else {
+        alert("Please enter your complaint.");
+      }
+    });
+  });
+  </script>
+</body>
+</html>

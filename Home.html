@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Governance At Your Door Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+ 
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+  
+  <style>
+ html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+      width:1000px;
+      height: 350px;
+      border: 2px solid;
+      position: relative;
+      top: 12px;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 1000px;
+      height:350px;
+      -o-object-fit: cover;
+         object-fit: cover;
+    }
+    .swiper-slide1 img{
+      width: 1000px;
+      height: 350px;
+    }
+    .swiper-slide2 img{
+      width: 1000px;
+      height: 350px;
+      position: relative;
+      left:30px;
+    }
+    /* Reset some default styles */
+* {
+    margin: 5;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/* Apply a background color to the body */
+body {
+    background-color: #f0f0f0;
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+}
+body {
+    position: relative;
+    height: 100%;
+  }
+  body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            /* Background color */
+        }
+
+        .nav1 {
+            height: 80px;
+            width: 100%;
+            background-color: #fff;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .logog20 img {
+            width: 90px;
+            height: 79px;
+        }
+
+        .logo2 img {
+            width: 90px;
+            height: 79px;
+            right: 30px;
+            position: relative;
+
+        }
+
+
+        .logo3 img {
+            width: 90px;
+            height: 79px;
+            right: -83px;
+            position: relative;
+        }
+
+        .heading {
+            font-size: 25px;
+            margin-top: -10px;
+        }
+
+        .navbar {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: justify;
+                -ms-flex-pack: justify;
+                    justify-content: space-between;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            height: 60px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            font-size: 18px;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links li:last-child {
+            margin-right: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            -webkit-transition: color 0.3s;
+            -o-transition: color 0.3s;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f39c12;
+        }
+.logo img{
+  width: 100px;
+}
+
+.box1,
+.box2,
+.box3,
+.box4 {
+    width: 600px;
+    height: 300px;
+    /* background-color: #007bff; */
+    margin: 20px;
+    border-radius: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    color: #fff;
+    font-size: 24px;
+}
+
+
+
+
+
+/* Footer styles */
+.new {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+}
+.header12{
+    
+    position: relative;
+    top: 23px;
+    background-color:white;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    place-content: center;
+    border-radius: 6px;
+    width:1000px;
+    left: 140px;
+}
+    
+
+
+ .box1:hover,
+.box2:hover,
+.box3:hover,
+.box4:hover {
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+@-webkit-keyframes slideIn {
+            from {
+                -webkit-transform: translateY(-20px);
+                        transform: translateY(-20px);
+            }
+
+            to {
+                -webkit-transform: translateY(0);
+                        transform: translateY(0);
+            }
+        }
+@keyframes slideIn {
+            from {
+                -webkit-transform: translateY(-20px);
+                        transform: translateY(-20px);
+            }
+
+            to {
+                -webkit-transform: translateY(0);
+                        transform: translateY(0);
+            }
+        }
+        section {
+            -webkit-animation: fadeIn 1s ease-in-out;
+                    animation: fadeIn 1s ease-in-out;
+        }
+
+        .nav1,
+        .navbar {
+            -webkit-animation: slideIn 1s ease-in-out;
+                    animation: slideIn 1s ease-in-out;
+        }
+
+.vidio{
+  width: 800px;
+  border-radius: 8px;
+  height: 300px;
+  position: relative;
+  left: 180px;
+}
+.cont{
+  /* border: 2px solid; */
+  display:inline-block;
+  position: relative;
+  left: px;
+  width:1200px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  place-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+
+}
+
+
+  </style>
+</head>
+
+<body>
+
+    <nav class="nav1">
+        <div class="logog20">
+            <img src="img/Emblem_India.png" alt="">
+
+
+        </div>
+        <div class="heading">
+            <H1>GOVERNANCE AT YOUR DOOR</H1>
+
+        </div>
+        <div class="logo3">
+            <img src="img/logo3.jpeg" alt="">
+
+        </div>
+        <div class="logo2">
+            <img src="img/logo2.png" alt="">
+
+        </div>
+    </nav>
+    <nav class="navbar">
+        <div class="logo"><h1 class="logo">G @ Y D</h1></div>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Schemes.html">Schemes</a></li>
+            <li><a href="Complaint.html">Complaint Here</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/home1.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/Home2.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/Home3.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/home4.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/home5.jpg" alt=""></div>
+      <!-- <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div> -->
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+  <div class="cont">
+    <div class="header12">
+      <div class="des3">
+          <h1 class="heading-main">Governance At Your Door</h1>
+          <p>Welcome to our Complaint Box, a dedicated platform designed to amplify the voices of both the common man and farmers. We understand that political, practical, and everyday issues can often go unnoticed, but they hold immense importance in shaping our society. Whether it's concerns about governance, policy matters, or the challenges faced in daily life and farming, this platform provides you with the opportunity to voice your opinions and seek solutions.</p>
+      </div>
+  
+      <div class="box1">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/ztP_Ah6k3pE?si=UjCD8ht09Kb0_tg6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="vidio"></iframe>
+      </div>
+  </div>
+  
+  <div class="header12">
+      <div class="des2">
+          <h1 class="heading-main">Schemes</h1>
+          <p>The Indian government has launched various schemes and initiatives across different sectors to address the needs and aspirations of its citizens. These schemes cover areas such as education, healthcare, social welfare, agriculture, infrastructure, and more. Here are some notable schemes provided by the Indian government:</p>
+      </div>
+  
+      <div class="box2">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/APLN4VUekM8?si=EZ18Mjn5awGWmRu3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="vidio"></iframe>
+      </div>
+  </div>
+  <div class="header12">
+      <div class="des3">
+          <h1 class="heading-main">Services</h1>
+          <p>The Indian government offers a wide range of services to its citizens across various sectors. These services aim to promote the welfare and development of the country's diverse population. Here are some of the key services provided by the Indian government:</p>
+          <!-- <p>1.Aadhaar Enrollment and Services:</p>
+          <p>2.PAN Card Services</p> 
+          <p>3.Passport and Visa Services:</p>
+          <p>4.Income Tax and Tax Refunds:</p>
+          <p>5.Income Tax and Tax Refunds:</p>
+          <p>6.Education Services:</p>
+          <p>7.Rural Development Services:</p> 
+          <p>8.Agricultural Support Services:</p>
+          <p>9.Social Welfare Schemes:</p> -->
+      </div>
+  
+      <div class="box3">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/605YoWKV4AY?si=XclOJ3agvrEets3y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="vidio"></iframe>
+      </div>
+  </div>
+  <div class="header12">
+      <div class="des4">
+          <h1 class="heading-main">Complaint Box</h1>
+          <p>Welcome to our Complaint Box, a dedicated platform designed to amplify the voices of both the common man and farmers. We understand that political, practical, and everyday issues can often go unnoticed, but they hold immense importance in shaping our society. Whether it's concerns about governance, policy matters, or the challenges faced in daily life and farming, this platform provides you with the opportunity to voice your opinions and seek solutions.</p>
+      </div>
+      <div class="box4">
+          <!-- Content for box4 -->
+      </div>
+  </div>
+
+  </div>
+  
+
+<div class="fot">
+    <footer class="new">
+        <p>&copy; 2023 Government at Your Door. All rights reserved.</p>
+    </footer>
+</div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+
+</html>

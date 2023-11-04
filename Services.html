@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+        border: 2px solid;
+        top:-10px;
+      width:80%;
+      height:50%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .nav1 {
+            height: 80px;
+            /* width: 100%; */
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .logog20 img {
+            width: 90px;
+            height: 79px;
+        }
+
+        .logo2 img {
+            width: 90px;
+            height: 79px;
+            right: 30px;
+            position: relative;
+
+        }
+
+
+        .logo3 img {
+            width: 90px;
+            height: 79px;
+            right: -83px;
+            position: relative;
+        }
+
+        .heading {
+            font-size: 25px;
+            margin-top: -10px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            height: 40px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            font-size: 18px;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links li:last-child {
+            margin-right: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f39c12;
+        }
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 2px;
+            background-color: #007bff;
+            color: white;
+            margin-top: 1px;
+            position: relative;
+            top: 80px; /* Offset for the fixed navigation bar */
+        }
+
+        .new p {
+            text-align: center;
+            padding: 5px;
+            background-color: #007bff;
+            color: white;
+            margin-top: 1px;
+        }
+
+        .none {
+            text-decoration: none;
+        }
+        .bold{
+            width: 100%;
+            height:80px;
+            position: relative;
+            text-align: center;
+            background: linear-gradient(to right, rgb(7, 118, 173), rgb(55, 199, 244), rgb(240, 240, 240));
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+        section {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .nav1,
+        .navbar
+        {
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .bold{
+           border: 2px solid;
+            
+        }
+
+        .lan1 {
+            width: 100%;
+            height: 390px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #fff;
+            margin-top: 75px;
+            display: flex;
+            justify-content: space-evenly;
+          
+        }
+
+        .box {
+            border: 2px solid rgb(51, 153, 56);
+            width: 291px;
+            height: 309px;
+            border-radius: 10px;
+            background-color: #078E31;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .circle {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(129.62deg, rgb(0, 30, 74) 1.95%, rgb(0, 73, 181) 100%), rgb(184, 197, 208);
+            border-radius: 50%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .circle img {
+            width: 32px;
+            height: 32px;
+            margin-top: 10px;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: 600px;
+            color: #fcfafa;
+        }
+
+        .one {
+            color: #f5f4f4;
+            font-size: 16px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin-top:4px;
+            width: 100%;
+            display: inline-block;
+            font-size: 12px;
+            border-radius: 18px;
+            cursor: pointer;
+            border: 1px solid rgb(255, 111, 0);
+            text-decoration: none;
+            background-color: transparent;
+            color: rgb(255, 111, 0);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: rgb(255, 111, 0);
+            color: aliceblue;
+        }
+
+
+  </style>
+</head>
+
+<body>
+
+    <nav class="nav1">
+        <div class="logog20">
+            <img src="img/Emblem_India.png" alt="">
+        </div>
+        <div class="heading">
+            <h1>GOVERNANCE AT YOUR DOOR</h1>
+        </div>
+        <div class="logo3">
+            <img src="img/logo3.jpeg" alt="">
+        </div>
+        <div class="logo2">
+            <img src="img/logo2.png" alt="">
+        </div>
+    </nav>
+
+    
+    <nav class="navbar">
+        <div class="logo"><h1>G @ Y D</h1></div>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Schemes.html">Schemes</a></li>
+            <li><a href="Complaint.html">Complaint Here</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+  <!-- Swiper -->
+  
+  <div class="bold">
+    <h1>Indian Goverment Services</h1></div>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="img/Service 1.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/Service 2.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/Service 3.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/Services 4.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/Service 5.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/Service 6.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="img/Service 7.jpeg" alt=""></div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <div class="body">
+    <div class="bottom">
+        <div class="lan1">
+            <div class="box">
+                <div class="circle">
+                    <img src="img/edu.png" alt="">
+                </div>
+                <h4>Education Services</h4>
+                <p>For information on Maharashtra government schemes, visit the official state website or contact the relevant government department. Their websites offer details on eligibility and application procedures.</p>
+                <a class="none" href="https://www.india.gov.in/e-governance-portal#:~:text=The%20National%20e%2DGovernance%20Plan,services%20to%20citizens%20and%20businesses."><button class="btn">Know More</button></a>
+            </div>
+            <div class="box">
+                <div class="circle">
+                    <img src="img/police.png" alt="">
+                </div>
+                <h4>Police and Law Enforcement Services</h4>
+                <p class="one">The government provides legal aid services to ensure access to justice for all citizens, particularly those who cannot afford legal representation.</p>
+                <a class="none" href="https://www.india.gov.in/e-governance-portal#:~:text=The%20National%20e%2DGovernance%20Plan,services%20to%20citizens%20and%20businesses."><button class="btn">Know More</button></a>
+            </div>
+            <div class="box">
+                <div class="circle">
+                    <img src="img/trans.png" alt="">
+                </div>
+                <h4>Transportation Services</h4>
+                <p class="one">Government agencies oversee road infrastructure, public transportation systems, and traffic management to facilitate safe and efficient travel.</p>
+                <a class="none" href="https://www.india.gov.in/e-governance-portal#:~:text=The%20National%20e%2DGovernance%20Plan,services%20to%20citizens%20and%20businesses."><button class="btn">Know More</button></a>
+            </div>
+        </div>
+        <div class="lan1">
+            <div class="box">
+                <div class="circle">
+                    <img src="img/health.jpg" alt="">
+                </div>
+                <h4>Public Healthcare Services</h4>
+                <p class="one"> Government-run hospitals and health centers offer healthcare services to citizens, including medical treatment, vaccinations, and maternal and child health programs.</p>
+                <a class="none" href="https://www.india.gov.in/e-governance-portal#:~:text=The%20National%20e%2DGovernance%20Plan,services%20to%20citizens%20and%20businesses. "><button class="btn">Know More</button></a>
+            </div>
+            <div class="box">
+                <div class="circle">
+                    <img src="img/utility.png" alt="">
+                </div>
+                <h4>Utility Services</h4>
+                <p class="one">
+                    Government agencies are responsible for providing essential utilities such as electricity, water supply, and sanitation services to citizens.</p>
+                <a class="none" href="https://www.india.gov.in/e-governance-portal#:~:text=The%20National%20e%2DGovernance%20Plan,services%20to%20citizens%20and%20businesses."><button class="btn">Know More</button></a>
+            </div>
+            <div class="box">
+                <div class="circle">
+                    <img src="img/pass1.png" alt="">
+                </div>
+                <h4>Passport and Visa Services</h4>
+                <p class="one">The Ministry of External Affairs provides passport and visa services for Indian citizens traveling abroad.</p>
+                <a class="none" href="https://www.india.gov.in/e-governance-portal#:~:text=The%20National%20e%2DGovernance%20Plan,services%20to%20citizens%20and%20businesses."><button class="btn">Know More</button></a>
+            </div>
+        </div>
+        <div class="lan1">
+            <div class="box">
+                <div class="circle">
+                    <img src="img/Agri.png" alt="">
+                </div>
+                <h4>Agricultural Services</h4>
+                <p class="one">
+                    The government offers agricultural services and subsidies to farmers, including crop insurance, irrigation facilities, and credit support.</p>
+                <a href="https://www.india.gov.in/topics/agriculture"><button class="btn">Know more</button></a>
+            </div>
+            <div class="box">
+                <div class="circle">
+                    <img src="img/emp.png" alt="">
+                </div>
+                <h4>Employment Services </h4>
+                <p class="one">Government-run employment exchanges and online portals assist job seekers in finding suitable employment opportunities.</p>
+                <a class="none" href="https://www.india.gov.in/e-governance-portal#:~:text=The%20National%20e%2DGovernance%20Plan,services%20to%20citizens%20and%20businesses."><button class="btn">Know More</button></a>
+            </div>
+            <div class="box">
+                <div class="circle">
+                    <img src="img/vote1.png" alt="">
+                </div>
+                <h4>E-Governance Services</h4>
+                <p class="one">Know about the States’ and UTs’ startup policies for Indian startups.</p>
+                <a class="none" href="https://www.india.gov.in/e-governance-portal#:~:text=The%20National%20e%2DGovernance%20Plan,services%20to%20citizens%20and%20businesses."><button class="btn">Know More</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p class="new">&copy; 2023 Government at Your Door. All rights reserved.</p>
+</footer>
+
+</body>
+
+
+
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+
+</html>

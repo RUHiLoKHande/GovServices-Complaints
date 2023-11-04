@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Demo styles -->
+  <style>
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color: #000;
+      margin: 0;
+      padding: 0;
+    }
+
+    .swiper {
+        border: 2px solid;
+       
+      width:80%;
+      height:50%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .nav1 {
+            height: 80px;
+            /* width: 100%; */
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .logog20 img {
+            width: 90px;
+            height: 79px;
+        }
+
+        .logo2 img {
+            width: 90px;
+            height: 79px;
+            right: 30px;
+            position: relative;
+
+        }
+
+
+        .logo3 img {
+            width: 90px;
+            height: 79px;
+            right: -83px;
+            position: relative;
+        }
+
+        .heading {
+            font-size: 25px;
+            margin-top: -10px;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            height: 40px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            font-size: 18px;
+        }
+
+        .nav-links li {
+            margin-right: 20px;
+        }
+
+        .nav-links li:last-child {
+            margin-right: 0;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: white;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #f39c12;
+        }
+        /* Footer styles */
+        footer {
+            text-align: center;
+            padding: 2px;
+            background-color: #007bff;
+            color: white;
+            margin-top: 1px;
+            position: relative;
+            top: 80px; /* Offset for the fixed navigation bar */
+        }
+
+        .new p {
+            text-align: center;
+            padding: 5px;
+            background-color: #007bff;
+            color: white;
+            margin-top: 1px;
+        }
+
+        .none {
+            text-decoration: none;
+        }
+        .bold{
+            width: 100%;
+            height:80px;
+            position: relative;
+            text-align: center;
+            background: linear-gradient(to right, rgb(7, 118, 173), rgb(55, 199, 244), rgb(240, 240, 240));
+            border: 2px solid;
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateY(-20px);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+        section {
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .nav1,
+        .navbar
+        {
+            animation: slideIn 1s ease-in-out;
+        }
+        
+        .lan1 {
+            width: 100%;
+            height: 390px;
+            display: flex;
+            justify-content: space-evenly;
+            background-color: #fff;
+            margin-top: 75px;
+            display: flex;
+            justify-content: space-evenly;
+          
+        }
+
+        .box {
+            border: 2px solid rgb(51, 153, 56);
+            width: 291px;
+            height: 309px;
+            border-radius: 10px;
+            background-color: #078E31;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+        }
+
+        .circle {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(129.62deg, rgb(0, 30, 74) 1.95%, rgb(0, 73, 181) 100%), rgb(184, 197, 208);
+            border-radius: 50%;
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .circle img {
+            width: 32px;
+            height: 32px;
+            margin-top: 10px;
+        }
+
+        h4 {
+            font-size: 18px;
+            font-weight: 600px;
+            color: #fcfafa;
+        }
+
+        .one {
+            color: #f5f4f4;
+            font-size: 16px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            margin-top:4px;
+            width: 100%;
+            display: inline-block;
+            font-size: 12px;
+            border-radius: 18px;
+            cursor: pointer;
+            border: 1px solid rgb(255, 111, 0);
+            text-decoration: none;
+            background-color: transparent;
+            color: rgb(255, 111, 0);
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: rgb(255, 111, 0);
+            color: aliceblue;
+        }
+  </style>
+</head>
+
+<body>
+    
+    <nav class="nav1">
+        <div class="logog20">
+            <img src="img/Emblem_India.png" alt="">
+        </div>
+        <div class="heading">
+            <h1>GOVERNANCE AT YOUR DOOR</h1>
+        </div>
+        <div class="logo3">
+            <img src="img/logo3.jpeg" alt="">
+        </div>
+        <div class="logo2">
+            <img src="img/logo2.png" alt="">
+        </div>
+    </nav>
+
+    
+    <nav class="navbar">
+        <div class="logo"><h1>G @ Y D</h1></div>
+        <ul class="nav-links">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="Services.html">Services</a></li>
+            <li><a href="Schemes.html">Schemes</a></li>
+            <li><a href="Complaint.html">Complaint Here</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="bold">
+        <h1>Indian Goverment Schemes</h1>
+    </div>
+  <!-- Swiper -->
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">Slide 1</div>
+      <div class="swiper-slide">Slide 2</div>
+      <div class="swiper-slide">Slide 3</div>
+      <div class="swiper-slide">Slide 4</div>
+      <div class="swiper-slide">Slide 5</div>
+      <div class="swiper-slide">Slide 6</div>
+      <div class="swiper-slide">Slide 7</div>
+      <div class="swiper-slide">Slide 8</div>
+      <div class="swiper-slide">Slide 9</div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+  <div class="body">
+    <div class="bottom">
+        <div class="lan1">
+            <div class="box">
+                <div class="circle">
+                    <img src="img/edu.png" alt="">
+                </div>
+                <h4>Schemes for Farmers</h4>
+                <p>Farmers' schemes promote sustainability, boost yields and income, securing farmers' lives and
+                    driving economic progress.</p>
+                <a class="none" href="http://127.0.0.1:5502/Schemesfarmer.html"><button class="btn">Know
+                        More</button></a>
+            </div>
+            <div class="box">
+                <div class="circle">
+                    <img src="img/police.png" alt="">
+                </div>
+                <h4>Shravan Bal Yojana 2023 Maharashtra Information</h4>
+                <p class="one">It provides support to eligible beneficiaries. For documents, scheme lists,
+                    beneficiary lists, and online forms, please check the official Maharashtra government website
+                    for complete details in Marathi.</p>
+                <a class="none"
+                    href="https://www.mahayojanaa.in/2022/07/shravan-bal-yojana-2022-marathi.html?m=1"><button
+                        class="btn">Know More</button></a>
+            </div>
+            <div class="box">
+                <div class="circle">
+                    <img src="img/trans.png" alt="">
+                </div>
+                <h4>Mahasamriddhi Women Empowerment Scheme</h4>
+                <p class="one">" It aims to empower women in the state. For specific details and updates, please
+                    refer to the Maharashtra government's official website or relevant authorities.</p>
+                <a class="none"
+                    href="https://www.mahayojanaa.in/2022/07/mahasamruddhi-mahila-sashaktikaran-yojana-2022%20.html?m=1 "><button
+                        class="btn">Know More</button></a>
+            </div>
+        </div>
+        <div class="lan1">
+            <div class="box">
+                <div class="circle">
+                    <img src="img/health.jpg" alt="">
+                </div>
+                <h4>Mahatma Jyotirao Phule Farmer Debt Relief Scheme 2023 Marathi</h4>
+                <p class="one"> "Maharashtra Mahatma Jyotirao Phule Loan Waiver Scheme 2023" and related lists,
+                    consult the official Maharashtra government website in Marathi.</p>
+                <a class="none"
+                    href="https://www.mahayojanaa.in/2022/08/mahatma-jyotirao-phule-shetkari-karj-mukti-yojana-marathi.html?m=1 "><button
+                        class="btn">Know More</button></a>
+            </div>
+            <div class="box">
+                <div class="circle">
+                    <img src="img/utility.png" alt="">
+                </div>
+                <h4>Mahajobs Portal 2023 Maharashtra Information Marathi</h4>
+                <p class="one">
+                    For online registration and applications on the "Mahajobs Portal 2023" by the Maharashtra
+                    government, visit mahajobs.maharashtra.gov.in.</p>
+                <a class="none" href="https://www.mahayojanaa.in/2022/08/mahajobs-portal.html?m=1"><button
+                        class="btn">Know More</button></a>
+            </div>
+            <div class="box">
+                <div class="circle">
+                    <img src="img/pass1.png" alt="">
+                </div>
+                <h4>Self Balasaheb Thackeray Road Accident Insurance Scheme</h4>
+                <p class="one">For information on the "Self Balasaheb Thackeray Accident Insurance Scheme 2022" in
+                    Maharashtra and online registration, visit the official government portal for details in
+                    Marathi.</p>
+                <a class="none"
+                    href="https://www.mahayojanaa.in/2022/08/balasaheb-thackeray-accidental-insurance-scheme.html?m=1 "><button
+                        class="btn">Know More</button></a>
+            </div>
+        </div>
+        <div class="lan1">
+            <div class="box">
+                <div class="circle">
+                    <img src="img/Agri.png" alt="">
+                </div>
+                <h4>Dr. Punjabrao Deshmukh Hostel Subsistence Allowance Scheme</h4>
+                <p class="one">
+                    To apply for the "Dr. Panjabrao Deshmukh Scholarship 2023" and the "Hostel Maintenance
+                    Allowance" in Maharashtra, visit the MahaDBT portal for online applications.</p>
+                <a
+                    href="https://www.mahayojanaa.in/2022/07/mukhyamantri-krishi-v-ann-prakriya-yojana-2022-maharashtra.html?m=1 "><button
+                        class="btn">Know more</button></a>
+            </div>
+            <div class="box">
+                <div class="circle">
+                    <img src="img/emp.png" alt="">
+                </div>
+                <h4>Rajmata Jijau Maternal and Child Health and Nutrition Mission 2023 </h4>
+                <p class="one">"Rajmata Jijau Mother Child Health & Nutrition Mission" in Maharashtra, please refer
+                    to the details available in Marathi.</p>
+                <a class="none"
+                    href="https://www.mahayojanaa.in/2022/11/rajmata-jijau-mother-child-health-and-nutrition-mission.html?m=1 "><button
+                        class="btn">Know More</button></a>
+            </div>
+            <div class="box">
+                <div class="circle">
+                    <img src="img/vote1.png" alt="">
+                </div>
+                <h4>Agriculture Infrastructure Fund</h4>
+                <p class="one">In July 2020, the Union Cabinet approved the Agriculture Infrastructure Fund,
+                    providing debt financing for post-harvest and community farming projects.</p>
+                <a class="none"
+                    href="https://vikaspedia.in/schemesall/schemes-for-farmers/agriculture-infrastructure-fund"><button
+                        class="btn">Know More</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p class="new">&copy; 2023 Government at Your Door. All rights reserved.</p>
+</footer>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+
+</html>
